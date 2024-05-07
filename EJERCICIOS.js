@@ -77,7 +77,7 @@ for (let y=0; y<5; y++){
 }
 
 
-let z = 0
+let z = 1
 do{
     console.log(z)
     z++
@@ -89,6 +89,8 @@ while(x<=3){
     console.log(x)
     x++
 }
-
+if (e==1){
+    console.log('hola')
+}
 
 

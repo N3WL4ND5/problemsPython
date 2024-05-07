@@ -70,27 +70,57 @@ console.log(x)
 const pi = 3.141
 console.log(typeof(pi))
 console.log((pi))
+
 /********************************************* */
-
-let a = [60,32,4,32,4,23,5,45,15,32,4,3,23,1]
+let a = [130,0,4,32,4,23,5,45,62,32,4,3,23,1]
 let tA = a.length
-console.log(tA)
-let mayor = -Infinity
-for (let i =0;i<=tA;i++){
-    suma= a[i]+a[i+1]
-    if (mayor <= suma){
-        mayor = suma
-    }else{
-        mayor = mayor
-    }
 
-   
+let mayor = -Infinity
+for (let i = 0; i<=tA; i++){
+    suma = a[i] + a[i+1]
+    if (mayor <= suma) {
+        mayor = suma
+    }
 }
 console.log(mayor)
 
+/***************************** */
+const array = [50,4,1,5,6,3]
+const{ length } = array 
 
+function maxAdjacentSum(array){
+    let maxSum = -Infinity
+    for(let i = 0; i < length - 1; i++) {
+        const sum = array[i] + array[i+1]
+        maxSum = Math.max(maxSum, sum)
+    }
+    return maxSum   
+}
+console.log(maxAdjacentSum(array))
 
+/**************************** */
+const array1 = [8,6,1,5,6,3]
 
+function maxAdjacentSum1(array){
+    let maxSum = -Infinity
+    const{ length } = array 
+    
+    for(let i = 0; i < length - 1; i++) {
+        const sum = array[i] + array[i+1]
+        if (sum > maxSum) { 
+            maxSum = sum
+        }
+    }
+    return maxSum   
+}
+console.log(maxAdjacentSum1(array1))
+ console.log(Math.max(0,4))
 
+/********************************/
+const numbers = [1,[2,3],3]
+const numbers2 = numbers
 
+numbers2[1][0] = 5
 
+console.log(numbers)
+console.log(numbers2)
