@@ -118,7 +118,7 @@ console.log(maxAdjacentSum1(array1))
 
 /********************************/
 const numbers = [1,[2,3],3]
-const numbers2 = numbers
+const numbers2 = [...numbers]
 
 numbers2[1][0] = 5
 
