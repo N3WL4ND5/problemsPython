@@ -124,3 +124,45 @@ numbers2[1][0] = 5
 
 console.log(numbers)
 console.log(numbers2)
+/***********NUMERO PALINDROMO *************/
+
+
+
+
+
+
+/***********FACTORIAL DE UN NUMERO *************/
+ function factorial (n){
+    switch (n){
+        case 0:
+            return 1
+        
+        default:
+           return n * factorial (n-1)
+    }
+
+ }
+console.log(factorial(9))
+
+
+
+/***********SUCESION DE FIBONACCI *************/
+
+function fibonacci(n){
+    
+    switch(n){
+        case 0:
+            return 0
+        case 1:
+            return 1
+        default:
+            return  fibonacci (n-1) + fibonacci(n-2)
+            
+    }        
+
+}
+console.log(fibonacci(3))
+
+/***********NUMERO PALINDROMO *************/
+/***********NUMERO PALINDROMO *************/
+/***********NUMERO PALINDROMO *************/
