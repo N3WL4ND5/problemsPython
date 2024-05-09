@@ -144,10 +144,7 @@ console.log(numbers2)
  }
 console.log(factorial(9))
 
-
-
 /***********SUCESION DE FIBONACCI *************/
-
 function fibonacci(n){
     
     switch(n){
@@ -160,9 +157,33 @@ function fibonacci(n){
             
     }        
 
-}
-console.log(fibonacci(3))
+}console.log(fibonacci(10))
 
-/***********NUMERO PALINDROMO *************/
-/***********NUMERO PALINDROMO *************/
+
+/***********SUCESION DE FIBONACCI (No recursiva)*************/
+function fibonacci1(n){
+    a = 0
+    b = 1 
+    if (n==0)return a
+    if (n==1)return b
+
+    for(i=2; i<=n; i++){
+        c = a+b
+        a = b
+        b = c
+    }
+    return b
+}console.log(fibonacci1(9))
+
+function fibo(n){
+    const fib = [0,1]
+    for(i=2; i<=n; i++){
+        fib[i] = fib[i-1] + fib[i-2]
+    }   return fib[n]
+    }   
+console.log(fibo(10))
+/***********TWOSUM*************/
+
+
+/***********TWOSIM(sin : for, while, do while,if, ternario, switch) *************/
 /***********NUMERO PALINDROMO *************/
