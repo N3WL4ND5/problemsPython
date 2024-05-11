@@ -20,7 +20,7 @@ numeros.unshift('cero')
 console.log(numeros)
 numeros.shift()
 console.log(numeros)
-numeros.pop()
+console.log(numeros.pop())
 console.log(numeros)
 
 
@@ -29,7 +29,7 @@ let animal = {
     patas : 4,
     cola: true
 }
-
+console.log(animal)
 function CreaAnimal (x,y,z){
     this.nombre = x
     this.patas = y
@@ -187,3 +187,22 @@ console.log(fibo(10))
 
 /***********TWOSIM(sin : for, while, do while,if, ternario, switch) *************/
 /***********NUMERO PALINDROMO *************/
+
+let Producto = {
+    lenteja: true,
+    crema: false,
+    arroz: true,
+    leche: false
+}
+
+function IVA (x){
+    if (Producto[x]==true){
+        msm = `${x}: Paga iva`
+    }else if(Producto[x]==false){
+        msm = `${x}: No paga iva`
+    }else
+        msm = `${x}: no hace parte de nuestros productos`
+    return msm
+}
+
+console.log(IVA('holaMundo'))
