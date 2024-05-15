@@ -127,44 +127,39 @@ let carreras = [
     }
     
 ]
-console.log(carreras[0].pilotos[2].cuota)
-
-
+console.log(`AQUI PUEDE VER CARREARAS Y PILOTOS DISPONIBLES:`,carreras)
 const ganador = Math.floor(Math.random()*(2+1)+0)
 
-console.log(ganador)
-
-let second = Math.floor(Math.random()*(2+1)+0) 
-    while(second==ganador){
-    second = Math.floor(Math.random()*(2+1)+0)
-    }
-console.log(second)
-
+let second = ganador 
+if (second==0 ||second==1){
+    second = second + 1
+}else{
+    second = second - Math.floor(Math.random()*(2)+1)
+}
 
 for (let i=0; i<carreras.length;i++){
 
     const carrera = carreras[i].nombreCarrera
     const campeon = carreras[i].pilotos[ganador]
-     second = carreras[i].pilotos[second]
+    let subcampeon = carreras[i].pilotos[second]
 
-
-    console.log(carrera,campeon, second)
+    console.log(carrera,campeon,subcampeon )
 }
-// Función para encontrar la información de un piloto por su nombre
-function encontrarInfoPiloto(pilotoApuesta) {
-    carreras.forEach(carrera => {
-      carrera.pilotos.forEach(piloto => {
-        if (piloto.nombre === pilotoApuesta) {
-          console.log(`Carrera: ${carrera.nombreCarrera}`)
-          console.log(`Piloto: ${piloto.nombre}, Cuota: ${piloto.cuota}`)
-        }
-      });
-    });
-  }
-  
-  // Llamar a la función con el nombre del piloto
- encontrarInfoPiloto("piloto");
 
+
+
+function apuestaUser(pilotoApuesta) {// Función que recibe nombre de piloto y devuelve cuota
+    carreras.forEach (carrera => {
+        carrera.pilotos.forEach(piloto => {
+          if (piloto.nombre === pilotoApuesta) {
+         
+               cuota = piloto.cuota 
+          }
+        })
+    })
+    return cuota
+}
+  console.log(apuestaUser("piloto8")) // Llamar a la función con el nombre del piloto
  
  /************************ */
  //Funciones anonimas

@@ -17,7 +17,7 @@ function precioLavado (cantidad,tipo) {
 
     }return precio
 }
-let price = precioLavado(0,'basico')
+let price = precioLavado(1,'basico')
 console.log(`el precio que debe pagar es : ${price}`)
 
 //
@@ -26,21 +26,8 @@ let xi = 53263565353
 console.log(xi.toLocaleString('es-ES'))
 
 /***************************Ejercicio8*
-//entradas{10000<=montoApuesta<=1000000,apuesta>18, tipoDeCarrera (true, flase) }
-//Sistema{
-    clase = carrera{piloto:1.2
-       
-    
-    }
-      
-     ganacias
-
-
-
-
-//salidas{ganancias}
-//CARRERAS*/
-let CARRERAS = [ 
+*/
+let carreras = [ 
     {
      nombreCarrera : "Gran Premio de Mónaco",
      pilotos:[
@@ -67,6 +54,44 @@ let CARRERAS = [
     }
     
 ]
+
+console.log(`AQUI PUEDE VER CARREARAS Y PILOTOS DISPONIBLES:`,carreras)
+//Winners
+const ganador = Math.floor(Math.random()*(2+1)+0)
+
+let second = ganador 
+
+if (second==0 ||second==1){
+    second = second + 1
+}else{
+    second = second - Math.floor(Math.random()*(2)+1)
+}
+
+for (let i=0; i<carreras.length;i++){
+
+    const carrera = carreras[i].nombreCarrera
+    const campeon = carreras[i].pilotos[ganador]
+    let subcampeon = carreras[i].pilotos[second]
+
+    console.log(carrera,campeon,subcampeon )
+}
+
+//ELECCION APUESTA
+
+function apuestaUser(pilotoApuesta) {// Función que recibe nombre de piloto y devuelve cuota
+    carreras.forEach (carrera => {
+        carrera.pilotos.forEach(piloto => {
+          if (piloto.nombre === pilotoApuesta) {
+         
+               cuota = piloto.cuota 
+          }
+        })
+    })
+    return cuota
+}
+let apuesta = prompt('REVISE LAS CARRERAS Y ESCRIBA EL NOMBRE DEL PILOTO QUE DESEA APOSTAR:') 
+console.log(apuestaUser(apuesta))// Llamar a la función con el nombre del piloto
+
 // MAYOR DE EDAD
 let edad = prompt('escriba su edad:')
 switch (edad>=18 ) {
@@ -81,8 +106,6 @@ switch (edad>=18 ) {
         break
             
 }
-//Eleccion de Carrera
-
 
 
 //MONTO
