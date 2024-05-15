@@ -1,4 +1,5 @@
 const edad = prompt('escriba su edad:')
+
 switch (edad>=18 ) {
     case true:
         console.log(`su edad es ${edad}`)
@@ -31,6 +32,21 @@ switch (edad>=18 ) {
         ] 
         console.log(`AQUI PUEDE VER CARRERAS Y PILOTOS DISPONIBLES:`,carreras)
 
+        function apuestaUser(pilotoApuesta) {// Función que recibe nombre de piloto y devuelve cuota
+            carreras.forEach (carrera => {
+                carrera.pilotos.forEach(piloto => {
+                
+                  if (piloto.nombre === pilotoApuesta) {//falta bucle de apuesta invalida
+                 
+                       cuota = piloto.cuota 
+                       
+                  }  
+                  
+                })
+            })
+            return cuota
+        }
+
         do {
             dineroApuesta = prompt('cuando desea apostar')
             if ( isNaN(dineroApuesta) || dineroApuesta<10000  || dineroApuesta>1000000 ){
@@ -48,27 +64,10 @@ switch (edad>=18 ) {
                 alert ('tipo de apuesta no valido')
             }else if(tipoDeApuesta==1){
                 console.log('TIPO DE APUESTA: 1. Ganador de la carrera')
-
-            
-                function apuestaUser(pilotoApuesta) {// Función que recibe nombre de piloto y devuelve cuota
-                    carreras.forEach (carrera => {
-                        carrera.pilotos.forEach(piloto => {
-                        
-                          if (piloto.nombre === pilotoApuesta) {
-                         
-                               cuota = piloto.cuota 
-
-                               console.log(piloto.nombre)
-                               console.log(piloto.cuota)
-                          }  
-                          
-                        })
-                    })
-                    return cuota
-                }
                 
                 pilotoApuesta = prompt('Escriba el piloto por el que desae apostar')
                 cuota = apuestaUser(pilotoApuesta)
+                console.log(pilotoApuesta)
                 console.log(cuota)
                 
                 const ganador = Math.floor(Math.random()*(2+1)+0)
@@ -92,6 +91,18 @@ switch (edad>=18 ) {
 
             }else if(tipoDeApuesta==2){
                 console.log('TIPO DE APUESTA: 2. Posiciones exactas')
+
+                pilotoApuesta = prompt('Escriba el primer piloto por el que desae apostar')
+                cuota = apuestaUser(pilotoApuesta)
+                console.log(pilotoApuesta)
+                console.log(cuota)
+
+                pilotoApuesta = prompt('Escriba el segundo piloto por el que desae apostar')
+                cuota = apuestaUser(pilotoApuesta)
+                console.log(pilotoApuesta)
+                console.log(cuota)
+                
+
 
                 const ganador = Math.floor(Math.random()*(2+1)+0)
 
