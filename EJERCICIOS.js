@@ -81,7 +81,7 @@ console.log(validQ)
 
 //FOR, DO-WHILE, WHILE//
 
-for (let y=0; y<5; y++){
+for (let y=0; y<=5; y++){
     console.log(y)
 }
 

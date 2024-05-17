@@ -72,12 +72,12 @@ console.log(typeof(pi))
 console.log((pi))
 
 /********************************************* */
-let a = [130,0,4,32,4,23,5,45,62,32,4,3,23,1]
-let tA = a.length
+let ar = [130,0,4,32,4,23,5,45,62,32,4,3,23,1]
+let tA = ar.length
 
 let mayor = -Infinity
 for (let i = 0; i<=tA; i++){
-    suma = a[i] + a[i+1]
+    suma = ar[i] + ar[i+1]
     if (mayor <= suma) {
         mayor = suma
     }
@@ -116,6 +116,8 @@ function maxAdjacentSum1(array){
 console.log(maxAdjacentSum1(array1))
  console.log(Math.max(0,4))
 
+ 
+
 /********************************/
 const numbers = [1,[2,3],3]
 const numbers2 = [...numbers]
@@ -125,9 +127,21 @@ numbers2[1][0] = 5
 console.log(numbers)
 console.log(numbers2)
 /***********NUMERO PALINDROMO *************/
+let arregloNumeros = [1, 2, 3, 4, 5]
+let cadenaNumeros = parseInt(arregloNumeros.join(''))
+console.log(cadenaNumeros)
 
 
-
+const numero = +'1'
+const arrayNumero = numero.toString().split('')
+console.log(arrayNumero)
+console.log(typeof(numero))
+let su = numero+1
+console.log(su)
+let preub = 2//+prompt('digite un numero')
+let t = preub + (1/3)
+console.log(typeof(t))
+console.log(t)
 
 
 
@@ -181,7 +195,7 @@ function fibo(n){
         fib[i] = fib[i-1] + fib[i-2]
     }   return fib[n]
     }   
-console.log(fibo(10))
+console.log(fibo(1))
 /***********TWOSUM*************/
 
 
@@ -206,3 +220,42 @@ function IVA (x){
 }
 
 console.log(IVA('holaMundo'))
+/******************************************** */
+
+let entrada ='1 1 5'
+let entrada3 = parseInt(entrada)
+let entrada2 = entrada.split(' ')
+
+
+//console.log(entrada2)
+//let prueba = entrada2[0]
+//console.log(typeof(prueba))
+
+for (let x=0; x<entrada2.length; x++){
+
+    let entrada2num = []
+    entrada2num[x]= parseInt(entrada2[x])
+    
+}
+//console.log(entrada2num)
+//let prueba2 = entrada2num[0]
+//console.log(typeof(prueba2))
+
+    a = parseInt(entrada2[0])
+    b = parseInt(entrada2[1])
+    k = parseInt(entrada2[2])
+
+console.log(a)
+console.log(b)
+console.log(k)
+   
+function funcionLineal(a1,b1,k1) {
+
+    for (let y=1; y<=k1; y++){
+
+        resultado= a1 * y + b1
+
+        console.log(resultado)
+    }
+}
+funcionLineal(a,b,k)

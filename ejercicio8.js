@@ -1,4 +1,4 @@
-const edad = prompt('escriba su edad:')
+const edad = 18//prompt('escriba su edad:')
 
 switch (edad>=18 ) {
     case true:
@@ -75,7 +75,7 @@ switch (edad>=18 ) {
                 let second = ganador 
 
                 if (second==0 ||second==1){
-                    second = second ++
+                    second = ++second 
                 }else{
                     second = second - Math.floor(Math.random()*(2)+1)
                 }
@@ -109,7 +109,7 @@ switch (edad>=18 ) {
                 let second = ganador 
 
                 if (second==0 ||second==1){
-                    second = second ++
+                    second = ++second 
                 }else{
                     second = second - Math.floor(Math.random()*(2)+1)
                 }
