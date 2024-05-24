@@ -222,21 +222,13 @@ function IVA (x){
 console.log(IVA('holaMundo'))
 /******************************************** */
 
-let entrada ='1 1 5'
-let entrada3 = parseInt(entrada)
+let entrada = '2 3 5'
 let entrada2 = entrada.split(' ')
-
 
 //console.log(entrada2)
 //let prueba = entrada2[0]
 //console.log(typeof(prueba))
 
-for (let x=0; x<entrada2.length; x++){
-
-    let entrada2num = []
-    entrada2num[x]= parseInt(entrada2[x])
-    
-}
 //console.log(entrada2num)
 //let prueba2 = entrada2num[0]
 //console.log(typeof(prueba2))
@@ -245,10 +237,6 @@ for (let x=0; x<entrada2.length; x++){
     b = parseInt(entrada2[1])
     k = parseInt(entrada2[2])
 
-console.log(a)
-console.log(b)
-console.log(k)
-   
 function funcionLineal(a1,b1,k1) {
 
     for (let y=1; y<=k1; y++){
@@ -259,3 +247,59 @@ function funcionLineal(a1,b1,k1) {
     }
 }
 funcionLineal(a,b,k)
+
+/**************CLASES**************** */
+
+class Personaje {
+    constructor(nombre,años,genero,elemento){
+        this._nombre = nombre
+        this._años = años
+        this._genero = genero
+        this._elemento = elemento
+    }
+    hablar(){
+        return `hola mi nombre es ${this._nombre} tengo ${this._años } y mi elemento es ${this._elemento} `
+    }
+    sumar(){}
+    saltar(){}
+
+    get nombre(){ //METODO que devuelve el valor de ese atributo del objeto instanciado
+        return this._nombre
+    }
+    set nombreNuevo(otro){ //METODO que cambia valor de ese atributo del objeto instanciado
+        this._nombre = otro
+    }
+
+}
+
+let personaje1 = new Personaje(`aang`,12,`hombre`,true)
+
+console.log(personaje1)
+
+personaje1.nombre = 'korra'
+console.log(personaje1)
+
+class Secundario extends Personaje {//subclase de la clase Personaje
+    constructor(nombre,años,rol){
+        super(nombre,años)
+        this._rol = rol//(años, elemento, nombre)
+    }
+    get rrol(){
+        return this._rol
+    }
+    set nuevoRol(otroRol){
+
+        this._rol = otroRol
+    }
+}
+
+let secundario1 = new Secundario('Appa',15,'aire')
+console.log(secundario1)
+
+console.log(secundario1.hablar())
+ console.log(secundario1.rrol)
+
+secundario1.nombreNuevo = 'Mommo'
+console.log(secundario1)
+secundario1.nuevoRol = 'prstfituta'
+console.log(secundario1)
