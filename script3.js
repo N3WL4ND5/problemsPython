@@ -303,3 +303,40 @@ secundario1.nombreNuevo = 'Mommo'
 console.log(secundario1)
 secundario1.nuevoRol = 'prstfituta'
 console.log(secundario1)
+
+const gender = true    //true para masculino
+const height = 1.77      //promp
+const age = 20             //promp
+const icfesResults = 100 //promp
+const tuition = 11800000 //promp
+
+let deduction = null
+
+if ((gender == true && height >= 1.70 && (age>=18 && age<=25) && icfesResults <= 60 ) || (gender == false && height >= 1.50 && (age>=18 && age<=28) && icfesResults <= 60 ) ){
+
+    console.log(`¡Congratulations, you are suitable!`)
+
+    if(icfesResults < 65){
+        deduction = tuition * 1.25
+        console.log (`And your registration costs ${deduction}`)
+
+    }
+    else if((icfesResults > 65 && icfesResults <= 70) && age > 22 ){
+        deduction = tuition
+        console.log (`And your registration costs ${deduction}`)
+
+    }
+    else if((icfesResults > 65 && icfesResults <= 70) && age >= 22 ){
+        deduction = tuition - tuition * 0.25
+        console.log (`And your registration costs ${deduction}`)
+
+    }
+    else if(icfesResults > 70){
+        deduction = tuition - tuition * 0.50
+        console.log (`And your registration costs ${deduction}`)
+
+    }
+
+}else {
+    console.log(`Unfortunately, not suitable`)
+}

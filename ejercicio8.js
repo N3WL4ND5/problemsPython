@@ -65,12 +65,12 @@ switch (edad>=18 ) {
             
             return campeon
         }
-        console.log(resultadosCarrera())
+        console.log((resultadosCarrera()))
         function apuestaUser(pilotoApuesta) {// Función que recibe nombre de piloto y devuelve cuota
             carreras.forEach (carrera => {
                 carrera.pilotos.forEach(piloto => {
                 
-                  if (piloto.nombre === pilotoApuesta) {//falta bucle de apuesta invalida
+                  if (piloto.nombre === pilotoApuesta) {//falta bucle de apuesta invalida                   
                  
                        cuota = piloto.cuota
                   }   
@@ -92,7 +92,7 @@ switch (edad>=18 ) {
 
         let tipoDeApuesta
         do {
-            tipoDeApuesta = 2//prompt('Que tipo de apuesta desea hacer:\n Ganador de la carrera (1) \n Posiciones exactas (2) ')
+            tipoDeApuesta = 1//prompt('Que tipo de apuesta desea hacer:\n Ganador de la carrera (1) \n Posiciones exactas (2) ')
             if ( isNaN(tipoDeApuesta) || (tipoDeApuesta!=1 && tipoDeApuesta!=2)){
                 alert ('tipo de apuesta no valido')
             }else if(tipoDeApuesta==1){
@@ -103,12 +103,10 @@ switch (edad>=18 ) {
                 console.log(pilotoApuesta)
                 console.log(cuota)
                 
-                resultadosCarrera()
-
-                if(resultadosCarrera()==pilotoApuesta){
+                if(resCar==pilotoApuesta){
 
                     dineroGanado = dineroApuesta * apuestaUser("piloto1")
-                    console.log(`usted gano: ${dineroGanado}`)
+                    console.log(`usted gano: ${dineroGanado}`)             
                 }
 
 
