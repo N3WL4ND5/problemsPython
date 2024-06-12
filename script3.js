@@ -340,3 +340,21 @@ if ((gender == true && height >= 1.70 && (age>=18 && age<=25) && icfesResults <=
 }else {
     console.log(`Unfortunately, not suitable`)
 }
+
+//             Piramide
+let pSize = 3
+const brick = '°'
+let builder =''
+
+for (let i = 1; i <= pSize; i++) {
+    builder += brick
+    console.log(builder)
+}
+
+for (let i = pSize - 1; i > 0; i--) {
+    builder =''
+    for (let j = 0; j < i; j++) {
+        builder += brick
+    }
+    console.log(builder);
+}
