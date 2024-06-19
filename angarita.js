@@ -93,3 +93,42 @@ let nota1 = 3.5
 let nota2 = 4.0
 let nota3 = 3.8
 console.log(calcularNotaDefinitiva(nota1, nota2, nota3))
+
+
+//                EJERCICIOS ADN                            //
+
+let chainSize = 5
+const adenina = 'A'
+const citosina = 'C'
+const guanina = 'G'
+const timina = 'T'
+let chainType = adenina
+let chain = ''
+
+for(let i=0; i<chainSize; i++){
+    chain += chainType
+}
+console.log(chain);
+
+chain= ''
+let nBase1 = Math.floor(Math.random()*(4)+1) == 1? adenina :
+             Math.floor(Math.random()*(4)+1) == 2? citosina : 
+             Math.floor(Math.random()*(4)+1) == 3? guanina :
+             Math.floor(Math.random()*(4)+1) == 4? timina : timina
+             
+let nBase2 = null
+
+do{ 
+    nBase2 = Math.floor(Math.random()*(4)+1) == 1? adenina :
+             Math.floor(Math.random()*(4)+1) == 2? citosina : 
+             Math.floor(Math.random()*(4)+1) == 3? guanina :
+             Math.floor(Math.random()*(4)+1) == 4? timina : adenina
+}while(nBase1==nBase2)
+
+console.log(nBase1);
+console.log(nBase2);
+
+for(let i=0; i<chainSize; i++){
+    chain += Math.floor(Math.random()*(2)+1)==1?nBase1:nBase2
+}
+console.log(chain);
