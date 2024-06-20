@@ -132,3 +132,39 @@ for(let i=0; i<chainSize; i++){
     chain += Math.floor(Math.random()*(2)+1)==1?nBase1:nBase2
 }
 console.log(chain);
+// NUMERO PRIMO//
+
+numero = 5
+
+for (let i = 2; i < numero; i++) {
+    
+    if(numero%i!=0){
+        residuo = true
+    }else{
+        residuo = false
+    }
+    
+}console.log(residuo)
+
+// Número que queremos verificar
+const num = 100000007;
+let isPrime = true
+
+if (num < 2) {
+    isPrime = false;
+} else {
+    
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            isPrime = false
+            break
+        }
+    }
+}
+
+if (isPrime) {
+    console.log(num + " es un número primo");
+} else {
+    console.log(num + " no es un número primo");
+}
+//Formas de encontrar primos monstruosos!! 2**(p-1) donde p es un numero primo
