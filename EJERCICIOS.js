@@ -174,6 +174,5 @@ saludo("funcion anonima!")
 const saludo1 = mensaje => {
     console.log(mensaje)
   }
-  
   saludo1("Hola, funcion flecha!")
   
